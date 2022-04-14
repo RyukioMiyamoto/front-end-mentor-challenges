@@ -1,0 +1,15 @@
+{
+  "name": "front-end-mentor-challenges",
+  "version": "1.0.0",
+  "description": "HTML, CSS/SASS and Javascript practice using frontend mentor free challenges",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Roberto Yukio",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
