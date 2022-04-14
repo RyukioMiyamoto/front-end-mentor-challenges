@@ -21,11 +21,19 @@ $spacing-smallest: 0.8rem;
 $spacing-small: 1rem;
 $spacing-medium: 1.6rem;
 $spacing-large: 2rem;
+$spacing-larger: 2.5rem;
 
 //// MIXINS
 @mixin basicFocusZoom {
   outline: none;
   transform: scale(1.15);
+}
+
+//// BREAK-POINTS
+@mixin desktop {
+  @media screen and (min-width: 68em) {
+    @content;
+  }
 }
 
 //// STYLE RESET
@@ -55,6 +63,10 @@ body {
   font-size: $heading-mobile;
   color: #fff;
   margin-bottom: $spacing-small;
+
+  @include desktop {
+    font-size: $heading-desktop;
+  }
 }
 
 //// FOOTER WITH SOCIAL MEDIA LINKS
@@ -75,6 +87,14 @@ body {
     object-fit: cover;
     width: 100%;
   }
+
+  @include desktop {
+    margin-top: $spacing-large;
+    img {
+      width: 150%;
+      transform: translateX(-33%);
+    }
+  }
 }
 
 .social-media {
@@ -84,11 +104,35 @@ body {
   gap: $spacing-small;
   margin-top: $spacing-small;
 
+  @include desktop {
+    gap: $spacing-larger;
+
+    a:focus {
+      outline: none;
+    }
+
+    // CUSTOMIZES FOCUS STATE
+    a:focus &__icon {
+      fill: $yukio-primary;
+      transform: scale(1.25);
+    }
+  }
+
   &__icon {
     width: 2.5rem;
     height: 2.5rem;
     fill: $yukio-neutral-light-1;
     transition: 0.25s;
+
+    @include desktop {
+      width: 4.5rem;
+      height: 4.5rem;
+
+      &:hover {
+        fill: $yukio-primary;
+        transform: scale(1.25);
+      }
+    }
   }
 }
 
@@ -99,6 +143,25 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: $spacing-large;
+
+  @include desktop {
+    a:focus {
+      & ~ .challenge__title {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      & ~ .challenge__title::after {
+        transform: scaleY(1);
+        transform-origin: top;
+      }
+
+      .challenge__preview-image {
+        transform: scale(2);
+        filter: brightness(1);
+      }
+    }
+  }
 }
 
 .challenge {
@@ -108,6 +171,12 @@ body {
   border-radius: 0.75rem;
   overflow: hidden;
   position: relative;
+  transition: 0.25s;
+
+  @include desktop {
+    width: 40rem;
+    height: 32.5rem;
+  }
 
   &__title {
     font-size: $standart-title-size;
@@ -117,6 +186,13 @@ body {
     left: 1rem;
     z-index: 5;
 
+    // MAKES TITLE INVISIBLE ON DESKTOP
+    @include desktop {
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.25s;
+    }
+
     &::after {
       content: "";
       width: 400%;
@@ -125,6 +201,13 @@ body {
       position: absolute;
       left: -10%;
       z-index: -1;
+
+      // MAKES TITLE-BG SHRINK ON DESKTOP
+      @include desktop {
+        transform: scaleY(0);
+        transform-origin: bottom;
+        transition: transform 0.35s;
+      }
     }
   }
 
@@ -133,5 +216,31 @@ body {
     height: 100%;
     object-fit: cover;
     transform: scale(1.55);
+    transition: 0.35s;
+
+    // REDUCES BRIGHTNESS ON DESKTOP
+    @include desktop {
+      filter: brightness(0.85);
+    }
+  }
+
+  @include desktop {
+    // MAKES TITLE VISIBLE ON HOVERED STATE
+    &:hover &__title {
+      opacity: 1;
+      visibility: visible;
+
+      // EXPANDS TITLE-BG ON HOVERED STATE
+      &::after {
+        transform: scaleY(1);
+        transform-origin: top;
+      }
+    }
+
+    // BRIGHTENS AND SCALES PREVIEW IMAGE UP ON HOVERED STATE
+    &:hover &__preview-image {
+      transform: scale(2);
+      filter: brightness(1);
+    }
   }
 }
