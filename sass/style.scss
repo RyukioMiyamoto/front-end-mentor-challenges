@@ -1,0 +1,44 @@
+//// VARIABLES
+// COLORS
+$yukio-bg: #181818;
+$yukio-neutral-light-1: #dedede;
+$yukio-primary: #ff8989;
+$yukio-primary-dark: #4c0000;
+
+// TYPOGRAPHY
+$standart-font-size: 1.6rem;
+$heading-mobile: 2.4rem;
+$heading-desktop: 4.8rem;
+
+// SPACING
+$spacing-smallest: 1rem;
+$spacing-small: 2rem;
+
+//// STYLE RESET
+*::before,
+*,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  // SETS STANDART FONT-SIZE TO 10PX
+  font-size: 62.5%;
+}
+
+body {
+  font: 300 $standart-font-size "Sora", sans-serif;
+  background-color: $yukio-bg;
+}
+
+.title {
+  padding: $spacing-smallest;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: $heading-mobile;
+  color: #fff;
+  margin-bottom: $spacing-small;
+}
