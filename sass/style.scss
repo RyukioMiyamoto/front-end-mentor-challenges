@@ -10,9 +10,20 @@ $standart-font-size: 1.6rem;
 $heading-mobile: 2.4rem;
 $heading-desktop: 4.8rem;
 
+// PADDING
+$padding-smallest: 1rem;
+$padding-small: 1.5rem;
+
 // SPACING
-$spacing-smallest: 1rem;
-$spacing-small: 2rem;
+$spacing-smallest: 0.8rem;
+$spacing-small: 1rem;
+$spacing-medium: 1.6rem;
+
+//// MIXINS
+@mixin basicFocusZoom {
+  outline: none;
+  transform: scale(1.15);
+}
 
 //// STYLE RESET
 *::before,
@@ -35,10 +46,45 @@ body {
 }
 
 .title {
-  padding: $spacing-smallest;
+  padding: $padding-smallest;
   text-align: center;
   text-transform: uppercase;
   font-size: $heading-mobile;
   color: #fff;
   margin-bottom: $spacing-small;
+}
+
+//// FOOTER WITH SOCIAL MEDIA LINKS
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $padding-small;
+  width: 100%;
+  background-color: $yukio-bg;
+  color: #fff;
+}
+
+.logo {
+  margin-top: $spacing-smallest;
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: $spacing-small;
+  margin-top: $spacing-small;
+
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: $yukio-neutral-light-1;
+    transition: 0.25s;
+  }
 }
