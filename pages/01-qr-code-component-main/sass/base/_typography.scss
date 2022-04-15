@@ -1,0 +1,17 @@
+body {
+  font: 400 1.5rem "Outfit", sans-serif;
+}
+
+.card {
+  &__heading {
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: $dark-blue;
+    margin-top: 0.5rem;
+  }
+
+  &__paragraph {
+    max-width: 25ch;
+    color: $grayish-blue;
+  }
+}

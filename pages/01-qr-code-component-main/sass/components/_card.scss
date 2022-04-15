@@ -1,0 +1,27 @@
+.card {
+  display: grid;
+  justify-items: center;
+  width: 32rem;
+  height: 49.7rem;
+  border-radius: 2rem;
+  padding: 1.5rem;
+  background-color: $white;
+  box-shadow: 0 1rem 1rem -0.5rem rgba($grayish-blue, 0.175);
+  margin: 8.5rem auto;
+
+  @include desktop-large {
+    margin: 15rem auto;
+  }
+
+  &__image {
+    width: 28.8rem;
+    height: 28.8rem;
+    border-radius: 1rem;
+  }
+
+  &__heading,
+  &__paragraph {
+    text-align: center;
+  }
+
+}
