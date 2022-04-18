@@ -91,8 +91,7 @@ body {
   @include desktop {
     margin-top: $spacing-large;
     img {
-      width: 150%;
-      transform: translateX(-33%);
+      transform: translateX(-16%);
     }
   }
 }

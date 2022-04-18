@@ -18,8 +18,7 @@
   @include desktop {
     margin-top: $spacing-large;
     img {
-      width: 150%;
-      transform: translateX(-33%);
+      transform: translateX(-16%);
     }
   }
 }
@@ -61,4 +60,12 @@
       }
     }
   }
+}
+
+.sr-only {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: -500%;
+  left: -500%;
 }
