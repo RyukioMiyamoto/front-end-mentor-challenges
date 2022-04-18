@@ -219,7 +219,7 @@ body {
 
     // REDUCES BRIGHTNESS ON DESKTOP
     @include desktop {
-      filter: brightness(0.85);
+      filter: brightness(0.75);
     }
   }
 
