@@ -1,0 +1,14 @@
+.main-container {
+  background-image: url("../img/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: $color-primary-light-1;
+  padding: 7rem 0;
+  min-height: 90vh;
+
+  @include desktop-large {
+    background-image: url("../img/pattern-background-desktop.svg");
+    background-repeat: repeat-x;
+    padding: 7rem 0 25rem 0;
+  }
+}

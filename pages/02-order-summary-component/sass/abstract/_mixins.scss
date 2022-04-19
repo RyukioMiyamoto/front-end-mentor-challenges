@@ -1,0 +1,18 @@
+//// BREAK-POINTS
+@mixin desktop {
+  @media screen and (min-width: 68em) {
+    @content;
+  }
+}
+
+@mixin desktop-large {
+  @media screen and (min-width: 65.25em) {
+    @content;
+  }
+}
+
+//// FLEXBOX WITH COLUMN ORIENTATION
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}

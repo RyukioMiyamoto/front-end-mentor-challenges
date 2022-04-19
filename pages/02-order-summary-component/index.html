@@ -14,13 +14,19 @@
       sizes="32x32"
       href="./img/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Order Summary component</title>
   </head>
   <body>
     <main class="main-container">
-      <div class="order">
-        <article class="order__hero"></article>
+      <article class="order">
+        <div class="order__hero"></div>
         <div class="order__summary">
           <h1 class="order__summary__heading-main">Order Summary</h1>
           <p class="order__summary__paragraph">
@@ -33,14 +39,55 @@
               Annual Plan <span class="plan__details-price">$59.99/year</span>
             </div>
 
-            <a href="#" class="plan__link">Change</a>
+            <a href="#" class="plan__link" aria-label="Change plan">Change</a>
           </div>
         </div>
         <div class="order__actions">
-          <button class="order__btn btn--primary">Proceed to Payment</button>
-          <button class="order__btn btn--secondary">Cancel Order</button>
+          <button class="btn btn--primary" type="button">
+            Proceed to Payment
+          </button>
+          <button class="btn btn--secondary" type="button">Cancel Order</button>
         </div>
-      </div>
+      </article>
     </main>
+    <footer class="footer">
+      <div class="logo">
+        <img
+          src="img/yukio-logo.svg"
+          alt="Roberto Yukio frontend developer"
+          width="256"
+          height="53"
+        />
+      </div>
+      <div class="social-media">
+        <a
+          href="https://www.linkedin.com/in/roberto-yukio/"
+          target="_blank"
+          aria-label="Linkedin profile"
+          ><svg class="social-media__icon">
+            <use href="img/sprite.svg#icon-linkedin" />
+          </svg>
+          <span class="sr-only">Linkedin</span>
+        </a>
+        <a
+          href="https://github.com/RyukioMiyamoto"
+          target="_blank"
+          aria-label="Github page"
+          ><svg class="social-media__icon">
+            <use href="img/sprite.svg#icon-github" />
+          </svg>
+          <span class="sr-only">Github</span>
+        </a>
+        <a
+          href="https://wa.me/5512982994827/?text=Hey%20Yukio!%20How's%20it%20going?"
+          target="_blank"
+          aria-label="Whatsapp contact"
+          ><svg class="social-media__icon">
+            <use href="img/sprite.svg#icon-whatsapp" />
+          </svg>
+          <span class="sr-only">Whatsapp</span>
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
