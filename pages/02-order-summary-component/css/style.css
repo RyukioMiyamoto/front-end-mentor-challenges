@@ -55,7 +55,11 @@ body {
         cursor: pointer; }
         .plan__link:hover {
           color: rgba(56, 41, 224, 0.75);
-          text-decoration: none; } }
+          text-decoration: none; }
+        .plan__link:focus {
+          outline: none;
+          text-shadow: 0 1rem 1rem rgba(56, 41, 224, 0.5);
+          transform: scale(1.075); } }
 
 .order {
   display: flex;
@@ -146,6 +150,10 @@ body {
     @media screen and (min-width: 65.25em) {
       .btn--secondary:hover {
         color: #1f2f56; } }
+  .btn:focus {
+    outline: none;
+    box-shadow: 0 1rem 1rem rgba(56, 41, 224, 0.5);
+    transform: scale(1.075); }
 
 .main-container {
   background-image: url("../img/pattern-background-mobile.svg");

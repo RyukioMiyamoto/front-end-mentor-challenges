@@ -61,6 +61,12 @@ body {
         color: rgba($color-primary-bright, 0.75);
         text-decoration: none;
       }
+
+      &:focus {
+        outline: none;
+        text-shadow: $shadow-medium;
+        transform: scale(1.075);
+      }
     }
   }
 }

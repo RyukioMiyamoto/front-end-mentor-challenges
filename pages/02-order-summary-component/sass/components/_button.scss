@@ -37,4 +37,10 @@
       }
     }
   }
+
+  &:focus {
+    outline: none;
+    box-shadow: $shadow-medium;
+    transform: scale(1.075);
+  }
 }
