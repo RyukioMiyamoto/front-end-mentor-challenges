@@ -28,13 +28,6 @@
     }
   }
 
-  &__summary {
-    @include flexColumn;
-
-    margin-top: 3.2rem;
-    align-items: center;
-  }
-
   &__actions {
     @include flexColumn;
     padding: 1.25rem;
@@ -44,6 +37,13 @@
       margin-top: 2rem;
     }
   }
+}
+
+.summary {
+  @include flexColumn;
+
+  margin-top: 3.2rem;
+  align-items: center;
 }
 
 .plan {
