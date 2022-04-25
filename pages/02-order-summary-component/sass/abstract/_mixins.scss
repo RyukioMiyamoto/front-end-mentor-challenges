@@ -1,4 +1,10 @@
 //// BREAK-POINTS
+@mixin tablet {
+  @media screen and (min-width: 48em) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media screen and (min-width: 65.25em) {
     @content;

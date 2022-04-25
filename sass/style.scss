@@ -24,10 +24,22 @@ $spacing-large: 2rem;
 $spacing-larger: 2.5rem;
 
 //// BREAK-POINTS
+@mixin tablet {
+  @media screen and (min-width: 48em) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media screen and (min-width: 65.25em) {
     @content;
   }
+}
+
+//// FLEXBOX WITH COLUMN ORIENTATION
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
 }
 
 //// STYLE RESET
@@ -82,7 +94,7 @@ body {
     width: 100%;
   }
 
-  @include desktop {
+  @include tablet {
     margin-top: $spacing-large;
     img {
       transform: translateX(-16%);

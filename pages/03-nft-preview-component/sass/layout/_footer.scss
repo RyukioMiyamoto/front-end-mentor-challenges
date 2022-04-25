@@ -1,5 +1,6 @@
 .footer {
-  @include flexColumn align-items: center;
+  @include flexColumn;
+  align-items: center;
   padding: $padding-small;
   width: 100%;
   background-color: $yukio-bg;
@@ -13,7 +14,7 @@
     width: 100%;
   }
 
-  @include desktop {
+  @include tablet {
     margin-top: $spacing-large;
     img {
       transform: translateX(-16%);
