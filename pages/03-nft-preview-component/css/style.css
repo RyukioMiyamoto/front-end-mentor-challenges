@@ -20,13 +20,8 @@ body {
   font-weight: 600;
   color: #fff; }
 
-.details__author {
-  color: #fff; }
-  .details__author h2 {
-    font-size: 1.6rem;
-    font-weight: 300; }
-  .details__author-name {
-    font-weight: 600; }
+.details__paragraph {
+  line-height: 160%; }
 
 .info__price {
   font-weight: 600;
@@ -35,6 +30,14 @@ body {
 .info__remaining {
   font-size: 1.5rem;
   font-weight: 400; }
+
+.author {
+  color: #fff; }
+  .author h2 {
+    font-size: 1.6rem;
+    font-weight: 300; }
+  .author__name {
+    font-weight: 600; }
 
 .card {
   display: flex;
@@ -54,6 +57,61 @@ body {
     background-image: url("../img/image-equilibrium.jpg");
     background-size: cover;
     margin: 0 auto; }
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; }
+  .details__summary {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; }
+  .details__separator {
+    width: 100%;
+    height: 1px;
+    background-color: #2f415b; }
+
+.info {
+  display: flex;
+  justify-content: space-between; }
+  .info__price {
+    margin-left: 1.5rem;
+    position: relative; }
+    .info__price::before {
+      display: inline-block;
+      content: "";
+      width: 1.1rem;
+      height: 1.8rem;
+      background-image: url("../img/icon-ethereum.svg");
+      position: absolute;
+      left: -1.75rem;
+      top: 0.1rem; }
+  .info__remaining {
+    position: relative; }
+    .info__remaining::before {
+      display: inline-block;
+      content: "";
+      width: 1.7rem;
+      height: 1.7rem;
+      background-image: url("../img/icon-clock.svg");
+      position: absolute;
+      left: -2.4rem;
+      top: 0.1rem; }
+
+.author {
+  display: flex;
+  padding: 0.5rem;
+  letter-spacing: -0.02em;
+  margin-left: 4.5rem;
+  position: relative; }
+  .author__picture {
+    width: 3.3rem;
+    height: 3.3rem;
+    border: 1px solid #2f415b;
+    border-radius: 50%;
+    left: -4.5rem;
+    top: -0.25rem;
+    position: absolute; }
 
 main {
   background-color: #0d192b;

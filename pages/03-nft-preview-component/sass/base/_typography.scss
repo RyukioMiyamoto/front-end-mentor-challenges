@@ -14,19 +14,7 @@ body {
   }
 
   &__paragraph {
-  }
-
-  &__author {
-    color: #fff;
-
-    h2 {
-      font-size: 1.6rem;
-      font-weight: 300;
-    }
-
-    &-name {
-      font-weight: 600;
-    }
+    line-height: 160%;
   }
 }
 
@@ -39,5 +27,18 @@ body {
   &__remaining {
     font-size: 1.5rem;
     font-weight: 400;
+  }
+}
+
+.author {
+  color: #fff;
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+
+  &__name {
+    font-weight: 600;
   }
 }
