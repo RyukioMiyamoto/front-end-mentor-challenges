@@ -1,27 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A QR Code component challenge from Frontend Mentor."
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>NFT Preview component</title>
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <div class="card__hero"></div>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>NFT preview card component</title>
-</head>
-<body>
+        <div class="details">
+          <div class="details__summary">
+            <h1 class="details__title">Equilibrium #3429</h1>
+            Our Equilibrium collection promotes balance and calm.
+          </div>
+          <h2 class="details__price">0.041 ETH</h2>
+          <span class="remaining">3 days left</span>
+          <div class="details__author">Creation of Jules Wyvern</div>
+        </div>
+      </div>
+    </main>
 
-  Equilibrium #3429
-
-  Our Equilibrium collection promotes balance and calm.
-
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer class="footer">
+      <div class="logo">
+        <img
+          src="img/yukio-logo.svg"
+          alt="Roberto Yukio frontend developer"
+          width="256"
+          height="53"
+        />
+      </div>
+      <div class="social-media">
+        <a
+          href="https://www.linkedin.com/in/roberto-yukio/"
+          target="_blank"
+          aria-label="Linkedin profile"
+          ><svg class="social-media__icon">
+            <use href="img/sprite.svg#icon-linkedin" />
+          </svg>
+          <span class="sr-only">Linkedin profile</span>
+        </a>
+        <a
+          href="https://github.com/RyukioMiyamoto"
+          target="_blank"
+          aria-label="Github page"
+          ><svg class="social-media__icon">
+            <use href="img/sprite.svg#icon-github" />
+          </svg>
+          <span class="sr-only">Github page</span>
+        </a>
+        <a
+          href="https://wa.me/5512982994827/?text=Hey%20Yukio!%20How's%20it%20going?"
+          target="_blank"
+          aria-label="Whatsapp contact"
+          ><svg class="social-media__icon">
+            <use href="img/sprite.svg#icon-whatsapp" />
+          </svg>
+          <span class="sr-only">Whatsapp contact</span>
+        </a>
+      </div>
+    </footer>
+  </body>
 </html>
