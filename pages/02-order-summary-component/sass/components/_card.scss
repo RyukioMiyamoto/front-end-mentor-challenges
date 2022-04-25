@@ -9,7 +9,7 @@
   margin: 0 auto;
   overflow: hidden;
 
-  @include desktop-large {
+  @include desktop {
     max-width: 45rem;
     margin: 10rem auto;
   }
@@ -23,7 +23,7 @@
     background-size: contain;
     background-repeat: no-repeat;
 
-    @include desktop-large {
+    @include desktop {
       height: 22rem;
     }
   }
@@ -33,7 +33,7 @@
     padding: 1.25rem;
     margin-top: 1.3rem;
 
-    @include desktop-large {
+    @include desktop {
       margin-top: 2rem;
     }
   }
@@ -55,7 +55,7 @@
   gap: 2rem;
   margin-top: 2rem;
 
-  @include desktop-large {
+  @include desktop {
     width: 35rem;
     padding: 2.5rem 2rem;
   }
@@ -64,7 +64,7 @@
     @include flexColumn;
     margin-right: 3.3rem;
 
-    @include desktop-large {
+    @include desktop {
       margin-right: 7rem;
     }
   }

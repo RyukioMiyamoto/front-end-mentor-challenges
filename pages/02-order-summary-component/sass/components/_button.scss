@@ -10,7 +10,7 @@
   margin-bottom: 0.5rem;
   transition: 0.25s;
 
-  @include desktop-large {
+  @include desktop {
     width: 35rem;
     margin-bottom: 1.6rem;
     cursor: pointer;
@@ -21,7 +21,7 @@
     background-color: $color-primary-bright;
     box-shadow: $shadow-small;
 
-    @include desktop-large {
+    @include desktop {
       &:hover {
         background-color: rgba($color-primary-bright, 0.75);
       }
@@ -31,7 +31,7 @@
     background-color: transparent;
     color: $color-primary-desaturated;
 
-    @include desktop-large {
+    @include desktop {
       &:hover {
         color: $color-primary-dark-1;
       }

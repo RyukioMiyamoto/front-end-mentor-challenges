@@ -23,15 +23,9 @@ $spacing-medium: 1.6rem;
 $spacing-large: 2rem;
 $spacing-larger: 2.5rem;
 
-//// MIXINS
-@mixin basicFocusZoom {
-  outline: none;
-  transform: scale(1.15);
-}
-
 //// BREAK-POINTS
 @mixin desktop {
-  @media screen and (min-width: 68em) {
+  @media screen and (min-width: 65.25em) {
     @content;
   }
 }

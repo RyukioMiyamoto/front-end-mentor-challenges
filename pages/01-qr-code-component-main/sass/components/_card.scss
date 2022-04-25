@@ -9,7 +9,7 @@
   box-shadow: 0 2rem 1rem -0.5rem rgba($grayish-blue, 0.175);
   margin: 8.5rem auto;
 
-  @include desktop-large {
+  @include desktop {
     margin: 15rem auto;
   }
 

@@ -1,5 +1,11 @@
 //// BREAK-POINTS
 @mixin desktop {
+  @media screen and (min-width: 68em) {
+    @content;
+  }
+}
+
+@mixin desktop-large {
   @media screen and (min-width: 65.25em) {
     @content;
   }
