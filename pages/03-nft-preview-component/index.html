@@ -14,12 +14,6 @@
       sizes="32x32"
       href="./img/favicon-32x32.png"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="css/style.css" />
     <title>NFT Preview component</title>
   </head>
@@ -27,13 +21,25 @@
     <main>
       <div class="card">
         <div class="card__preview">
-          <a href="#"><div class="card__preview-hover"></div></a>
-          <img src="./img/image-equilibrium.jpg" alt="" />
+          <a href="#" aria-label="NFT preview"
+            ><div class="card__preview-hover"></div
+          ></a>
+          <img
+            src="./img/image-equilibrium.jpg"
+            alt=""
+            width="280"
+            height="280"
+          />
         </div>
 
         <div class="details">
           <div class="details__summary">
-            <h1><a href="#" class="details__title">Equilibrium #3429</a></h1>
+            <h1>
+              <a href="#" class="details__title" aria-label="NFT title"
+                >Equilibrium #3429
+                <span class="sr-only">NFT title</span>
+              </a>
+            </h1>
             <p class="details__paragraph">
               Our Equilibrium collection promotes balance and calm.
             </p>
@@ -53,7 +59,11 @@
             </div>
             <h2>
               Creation of
-              <span><a href="#" class="author__name">Jules Wyvern</a></span>
+              <span
+                ><a href="#" class="author__name" aria-label="NFT creator"
+                  >Jules Wyvern <span class="sr-only">NFT creator</span></a
+                ></span
+              >
             </h2>
           </div>
         </div>
