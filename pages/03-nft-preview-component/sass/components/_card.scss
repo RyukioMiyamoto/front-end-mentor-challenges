@@ -1,0 +1,21 @@
+.card {
+  @include flexColumn;
+  gap: 2.4rem;
+  padding: 2.4rem;
+  width: 32.7rem;
+  border-radius: 1.5rem;
+  background-color: $card-bg;
+  margin: 0 auto;
+
+  &__hero {
+    display: block;
+    content: "";
+    width: 27.9rem;
+    height: 27.9rem;
+    border-radius: 1rem;
+
+    background-image: url("../img/image-equilibrium.jpg");
+    background-size: cover;
+    margin: 0 auto;
+  }
+}

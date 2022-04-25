@@ -13,16 +13,12 @@ body {
   font: 300 1.6rem "Outfit", sans-serif; }
 
 .card {
-  background-color: #14253d;
   color: #8bacda; }
 
 .details__title {
   font-size: 2.2rem;
   font-weight: 600;
   color: #fff; }
-
-.details__paragraph {
-  font-size: 1.8rem; }
 
 .details__author {
   color: #fff; }
@@ -33,15 +29,35 @@ body {
     font-weight: 600; }
 
 .info__price {
-  font-size: 1.6rem;
   font-weight: 600;
   color: #00fff7; }
 
 .info__remaining {
+  font-size: 1.5rem;
   font-weight: 400; }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 2.4rem;
+  width: 32.7rem;
+  border-radius: 1.5rem;
+  background-color: #14253d;
+  margin: 0 auto; }
+  .card__hero {
+    display: block;
+    content: "";
+    width: 27.9rem;
+    height: 27.9rem;
+    border-radius: 1rem;
+    background-image: url("../img/image-equilibrium.jpg");
+    background-size: cover;
+    margin: 0 auto; }
+
 main {
-  background-color: #0d192b; }
+  background-color: #0d192b;
+  padding: 6rem 2rem; }
 
 .footer {
   display: flex;

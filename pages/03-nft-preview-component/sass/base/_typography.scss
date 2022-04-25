@@ -3,7 +3,6 @@ body {
 }
 
 .card {
-  background-color: $card-bg;
   color: $text-primary;
 }
 
@@ -15,7 +14,6 @@ body {
   }
 
   &__paragraph {
-    font-size: 1.8rem;
   }
 
   &__author {
@@ -34,12 +32,12 @@ body {
 
 .info {
   &__price {
-    font-size: 1.6rem;
     font-weight: 600;
     color: $text-secondary;
   }
 
   &__remaining {
+    font-size: 1.5rem;
     font-weight: 400;
   }
 }
