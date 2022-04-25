@@ -83,7 +83,7 @@ body {
 }
 
 .author {
-  color: #fff;
+  color: $text-primary;
 
   h2 {
     font-size: 1.6rem;
@@ -94,6 +94,7 @@ body {
   &__name:link,
   &__name:visited {
     text-decoration: none;
+    letter-spacing: 0.01em;
     color: #fff;
 
     @include desktop {

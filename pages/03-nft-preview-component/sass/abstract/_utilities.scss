@@ -1,0 +1,21 @@
+@include desktop {
+  .focusable,
+  .focusable-text {
+    display: inline-block;
+    transition: 0.125s;
+
+    &:focus {
+      outline: none;
+      transform: scale(1.05);
+    }
+
+    &:focus .card__preview-hover::after {
+      opacity: 1;
+    }
+  }
+
+  .focusable-text:focus {
+    color: $text-secondary !important;
+    text-shadow: 0 0 1rem rgba($text-primary, 0.75);
+  }
+}

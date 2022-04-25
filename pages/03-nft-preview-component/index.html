@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="A QR Code component challenge from Frontend Mentor."
+      content="A NFT Preview component challenge from Frontend Mentor."
     />
     <link
       rel="icon"
@@ -20,22 +20,25 @@
   <body>
     <main>
       <div class="card">
-        <div class="card__preview">
-          <a href="#" aria-label="NFT preview"
-            ><div class="card__preview-hover"></div
-          ></a>
-          <img
-            src="./img/image-equilibrium.jpg"
-            alt=""
-            width="280"
-            height="280"
-          />
-        </div>
+        <a href="#" aria-label="NFT preview" class="focusable"
+          ><div class="card__preview">
+            <div class="card__preview-hover"></div>
+            <img
+              src="./img/image-equilibrium.jpg"
+              alt=""
+              width="280"
+              height="280"
+              aria-hidden="true"
+            /></div
+        ></a>
 
         <div class="details">
           <div class="details__summary">
             <h1>
-              <a href="#" class="details__title" aria-label="NFT title"
+              <a
+                href="#"
+                class="details__title focusable-text"
+                aria-label="NFT title"
                 >Equilibrium #3429
                 <span class="sr-only">NFT title</span>
               </a>
@@ -55,12 +58,17 @@
                 src="./img/image-avatar.png"
                 alt=""
                 class="author__picture"
+                width="33"
+                height="33"
               />
             </div>
             <h2>
               Creation of
               <span
-                ><a href="#" class="author__name" aria-label="NFT creator"
+                ><a
+                  href="#"
+                  class="author__name focusable-text"
+                  aria-label="NFT creator"
                   >Jules Wyvern <span class="sr-only">NFT creator</span></a
                 ></span
               >
