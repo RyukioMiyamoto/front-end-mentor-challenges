@@ -1,4 +1,8 @@
 main {
   background-color: $main-bg;
   padding: 6rem 2rem;
+
+  @include desktop {
+    padding: 15rem 2rem;
+  }
 }

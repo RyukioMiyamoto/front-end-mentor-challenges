@@ -7,16 +7,26 @@
   background-color: $card-bg;
   margin: 0 auto;
 
+  @include desktop {
+    width: 35rem;
+    height: 60rem;
+  }
+
   &__hero {
     display: block;
     content: "";
-    width: 27.9rem;
-    height: 27.9rem;
+    width: 28rem;
+    height: 28rem;
     border-radius: 1rem;
 
     background-image: url("../img/image-equilibrium.jpg");
     background-size: cover;
     margin: 0 auto;
+
+    @include desktop {
+      width: 30rem;
+      height: 30rem;
+    }
   }
 }
 
@@ -39,6 +49,11 @@
 .info {
   display: flex;
   justify-content: space-between;
+  padding-top: 0.5rem;
+
+  @include desktop {
+    margin-bottom: 1rem;
+  }
 
   &__price {
     margin-left: 1.5rem;

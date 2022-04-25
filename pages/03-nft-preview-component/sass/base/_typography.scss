@@ -15,6 +15,10 @@ body {
 
   &__paragraph {
     line-height: 160%;
+
+    @include desktop {
+      font-size: 1.8rem;
+    }
   }
 }
 
@@ -27,6 +31,10 @@ body {
   &__remaining {
     font-size: 1.5rem;
     font-weight: 400;
+
+    @include desktop {
+      font-size: 1.6rem;
+    }
   }
 }
 
