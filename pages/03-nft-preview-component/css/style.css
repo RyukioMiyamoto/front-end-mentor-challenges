@@ -15,10 +15,17 @@ body {
 .card {
   color: #8bacda; }
 
-.details__title {
+.details__title, .details__title:link, .details__title:visited {
   font-size: 2.2rem;
-  font-weight: 600;
+  text-decoration: none;
   color: #fff; }
+  @media screen and (min-width: 65.25em) {
+    .details__title, .details__title:link, .details__title:visited {
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.25s; }
+      .details__title:hover, .details__title:link:hover, .details__title:visited:hover {
+        color: #00fff7; } }
 
 .details__paragraph {
   line-height: 160%; }
@@ -42,8 +49,16 @@ body {
   .author h2 {
     font-size: 1.6rem;
     font-weight: 300; }
-  .author__name {
-    font-weight: 600; }
+  .author__name, .author__name:link, .author__name:visited {
+    text-decoration: none;
+    color: #fff; }
+    @media screen and (min-width: 65.25em) {
+      .author__name, .author__name:link, .author__name:visited {
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.25s; }
+        .author__name:hover, .author__name:link:hover, .author__name:visited:hover {
+          color: #00fff7; } }
 
 .card {
   display: flex;
@@ -58,19 +73,32 @@ body {
     .card {
       width: 35rem;
       height: 60rem; } }
-  .card__hero {
-    display: block;
-    content: "";
+  .card__preview {
     width: 28rem;
     height: 28rem;
     border-radius: 1rem;
-    background-image: url("../img/image-equilibrium.jpg");
-    background-size: cover;
-    margin: 0 auto; }
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative; }
+    .card__preview img {
+      width: 100%; }
     @media screen and (min-width: 65.25em) {
-      .card__hero {
+      .card__preview {
         width: 30rem;
-        height: 30rem; } }
+        height: 30rem;
+        cursor: pointer; }
+        .card__preview-hover::after {
+          display: block;
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: url("../img/icon-view.svg") no-repeat center;
+          background-color: rgba(0, 255, 247, 0.5);
+          opacity: 0;
+          transition: 0.25s ease;
+          position: absolute; }
+        .card__preview-hover:hover::after {
+          opacity: 1; } }
 
 .details {
   display: flex;
