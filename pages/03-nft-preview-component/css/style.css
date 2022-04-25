@@ -9,6 +9,40 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; }
 
+body {
+  font: 300 1.6rem "Outfit", sans-serif; }
+
+.card {
+  background-color: #14253d;
+  color: #8bacda; }
+
+.details__title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #fff; }
+
+.details__paragraph {
+  font-size: 1.8rem; }
+
+.details__author {
+  color: #fff; }
+  .details__author h2 {
+    font-size: 1.6rem;
+    font-weight: 300; }
+  .details__author-name {
+    font-weight: 600; }
+
+.info__price {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #00fff7; }
+
+.info__remaining {
+  font-weight: 400; }
+
+main {
+  background-color: #0d192b; }
+
 .footer {
   display: flex;
   flex-direction: column;

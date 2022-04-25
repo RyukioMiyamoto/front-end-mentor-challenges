@@ -1,0 +1,45 @@
+body {
+  font: 300 1.6rem "Outfit", sans-serif;
+}
+
+.card {
+  background-color: $card-bg;
+  color: $text-primary;
+}
+
+.details {
+  &__title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  &__paragraph {
+    font-size: 1.8rem;
+  }
+
+  &__author {
+    color: #fff;
+
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 300;
+    }
+
+    &-name {
+      font-weight: 600;
+    }
+  }
+}
+
+.info {
+  &__price {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $text-secondary;
+  }
+
+  &__remaining {
+    font-weight: 400;
+  }
+}
