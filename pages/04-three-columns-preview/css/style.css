@@ -9,6 +9,125 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; }
 
+/* vietnamese */
+@font-face {
+  font-family: "Big Shoulders Display";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bigshouldersdisplay/v13/fC1MPZJEZG-e9gHhdI4-NBbfd2ys3SjJCx12wPgf9g-_3F0YdWg8FFYwSCP4.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB; }
+
+/* latin-ext */
+@font-face {
+  font-family: "Big Shoulders Display";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bigshouldersdisplay/v13/fC1MPZJEZG-e9gHhdI4-NBbfd2ys3SjJCx12wPgf9g-_3F0YdWg8FFcwSCP4.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+/* latin */
+@font-face {
+  font-family: "Big Shoulders Display";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bigshouldersdisplay/v13/fC1MPZJEZG-e9gHhdI4-NBbfd2ys3SjJCx12wPgf9g-_3F0YdWg8FFkwSA.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+/* vietnamese */
+@font-face {
+  font-family: "Lexend Deca";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexenddeca/v15/K2FifZFYk-dHSE0UPPuwQ7CrD94i-NCKm-U48M1wpBnDmLM.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB; }
+
+/* latin-ext */
+@font-face {
+  font-family: "Lexend Deca";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexenddeca/v15/K2FifZFYk-dHSE0UPPuwQ7CrD94i-NCKm-U48M1wpRnDmLM.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+/* latin */
+@font-face {
+  font-family: "Lexend Deca";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexenddeca/v15/K2FifZFYk-dHSE0UPPuwQ7CrD94i-NCKm-U48M1wqxnD.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+body {
+  font: 400 1.5rem "Lexend Deca", sans-serif; }
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 32.7rem;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  margin: 8rem auto; }
+  @media screen and (min-width: 65.25em) {
+    .cards-container {
+      flex-direction: row;
+      max-width: 92rem; } }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+  color: rgba(255, 255, 255, 0.749); }
+  .card__icon {
+    margin-bottom: 3.5rem; }
+  .card__title {
+    font-family: "Big Shoulders Display";
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: #f2f2f2;
+    margin-bottom: 2.5rem; }
+  .card__paragraph {
+    line-height: 165%;
+    margin-bottom: 2.4rem; }
+    @media screen and (min-width: 65.25em) {
+      .card__paragraph {
+        margin-bottom: 8.4rem; } }
+  .card:nth-child(2) {
+    background-color: #e38826; }
+    .card:nth-child(2) > .btn {
+      color: #e38826; }
+  .card:nth-child(3) {
+    background-color: #006970; }
+    .card:nth-child(3) > .btn {
+      color: #006970; }
+  .card:nth-child(4) {
+    background-color: #004241; }
+    .card:nth-child(4) > .btn {
+      color: #004241; }
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14.7rem;
+  height: 4.8rem;
+  background-color: #f2f2f2;
+  border-radius: 2.5rem;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer; }
+
+html {
+  background-color: #f2f2f2; }
+
+main {
+  min-height: 100vh; }
+
 .footer {
   display: flex;
   flex-direction: column;

@@ -1,0 +1,61 @@
+.cards-container {
+  @include flexColumn;
+  max-width: 32.7rem;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  margin: 8rem auto;
+
+  @include desktop {
+    flex-direction: row;
+    max-width: 92rem;
+  }
+}
+
+.card {
+  @include flexColumn;
+  padding: 5rem;
+  color: $neutral-light-1;
+
+  &__icon {
+    margin-bottom: 3.5rem;
+  }
+  &__title {
+    font-family: "Big Shoulders Display";
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: $neutral-light-2;
+    margin-bottom: 2.5rem;
+  }
+  &__paragraph {
+    line-height: 165%;
+    margin-bottom: 2.4rem;
+
+    @include desktop {
+      margin-bottom: 8.4rem;
+    }
+  }
+
+  &:nth-child(2) {
+    background-color: $color-primary;
+
+    & > .btn {
+      color: $color-primary;
+    }
+  }
+
+  &:nth-child(3) {
+    background-color: $color-secondary;
+
+    & > .btn {
+      color: $color-secondary;
+    }
+  }
+
+  &:nth-child(4) {
+    background-color: $color-tertiary;
+
+    & > .btn {
+      color: $color-tertiary;
+    }
+  }
+}
