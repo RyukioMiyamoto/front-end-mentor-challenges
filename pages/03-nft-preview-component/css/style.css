@@ -215,6 +215,7 @@ body {
         top: 0.25rem; } }
 
 main {
+  min-height: 100vh;
   background-color: #0d192b;
   padding: 6rem 2rem; }
   @media screen and (min-width: 65.25em) {

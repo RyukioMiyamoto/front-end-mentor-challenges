@@ -161,7 +161,7 @@ body {
   background-size: contain;
   background-color: #e0e8ff;
   padding: 7rem 0;
-  min-height: 90vh; }
+  min-height: 100vh; }
   @media screen and (min-width: 65.25em) {
     .main-container {
       background-image: url("../img/pattern-background-desktop.svg");
@@ -181,7 +181,7 @@ body {
   .logo img {
     object-fit: cover;
     width: 100%; }
-  @media screen and (min-width: 68em) {
+  @media screen and (min-width: 65.25em) {
     .logo {
       margin-top: 2rem; }
       .logo img {
@@ -193,7 +193,7 @@ body {
   width: 100%;
   gap: 1rem;
   margin-top: 1rem; }
-  @media screen and (min-width: 68em) {
+  @media screen and (min-width: 65.25em) {
     .social-media {
       gap: 2.5rem; }
       .social-media a:focus {
@@ -206,7 +206,7 @@ body {
     height: 2.5rem;
     fill: #dedede;
     transition: 0.25s; }
-    @media screen and (min-width: 68em) {
+    @media screen and (min-width: 65.25em) {
       .social-media__icon {
         width: 4.5rem;
         height: 4.5rem; }
