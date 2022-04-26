@@ -124,7 +124,16 @@ body {
   border: 2px solid #f2f2f2;
   border-radius: 2.5rem;
   text-decoration: none;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: 0.25s; }
+  @media screen and (min-width: 65.25em) {
+    .btn:hover, .btn:focus {
+      background-color: transparent;
+      color: #f2f2f2 !important; }
+    .btn:focus {
+      outline: none;
+      transform: scale(1.05);
+      box-shadow: 0 2rem 0.5rem -1rem rgba(0, 0, 0, 0.125); } }
 
 html {
   background-color: #f2f2f2; }

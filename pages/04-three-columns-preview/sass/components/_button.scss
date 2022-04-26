@@ -9,5 +9,19 @@
   border-radius: 2.5rem;
   text-decoration: none;
   cursor: pointer;
+  transition: 0.25s;
 
+  @include desktop {
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      color: $neutral-light-2 !important;
+    }
+
+    &:focus {
+      outline: none;
+      transform: scale(1.05);
+      box-shadow: 0 2rem 0.5rem -1rem rgba(0, 0, 0, 0.125);
+    }
+  }
 }
