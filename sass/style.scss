@@ -148,6 +148,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: $spacing-large;
+  margin-bottom: 10rem;
 
   @include desktop {
     a:focus {
@@ -209,8 +210,8 @@ body {
 
       // MAKES TITLE-BG SHRINK ON DESKTOP
       @include desktop {
-        transform: scaleY(0);
-        transform-origin: bottom;
+        transform: scaleX(0);
+        transform-origin: right;
         transition: transform 0.35s;
       }
     }
@@ -237,8 +238,8 @@ body {
 
       // EXPANDS TITLE-BG ON HOVERED STATE
       &::after {
-        transform: scaleY(1);
-        transform-origin: top;
+        transform: scaleX(1);
+        transform-origin: left;
       }
     }
 
