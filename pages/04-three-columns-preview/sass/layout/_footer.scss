@@ -1,0 +1,70 @@
+.footer {
+  @include flexColumn;
+  align-items: center;
+  padding: $padding-small;
+  width: 100%;
+  background-color: $yukio-bg;
+  color: #fff;
+}
+
+.logo {
+  margin-top: $spacing-smallest;
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  @include tablet {
+    margin-top: $spacing-large;
+    img {
+      transform: translateX(-16%);
+    }
+  }
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: $spacing-small;
+  margin-top: $spacing-small;
+
+  @include desktop {
+    gap: $spacing-larger;
+
+    a:focus {
+      outline: none;
+    }
+
+    // CUSTOMIZES FOCUS STATE
+    a:focus &__icon {
+      fill: $yukio-primary;
+      transform: scale(1.25);
+    }
+  }
+
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: $yukio-neutral-light-1;
+    transition: 0.25s;
+
+    @include desktop {
+      width: 4.5rem;
+      height: 4.5rem;
+
+      &:hover {
+        fill: $yukio-primary;
+        transform: scale(1.25);
+      }
+    }
+  }
+}
+
+.sr-only {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: -500%;
+  left: -500%;
+}
