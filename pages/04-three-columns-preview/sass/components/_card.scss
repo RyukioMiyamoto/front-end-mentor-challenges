@@ -16,6 +16,11 @@
   padding: 5rem;
   color: $neutral-light-1;
 
+  @include desktop {
+    padding: 5rem 4.8rem;
+    width: 30.6rem;
+  }
+
   &__icon {
     margin-bottom: 3.5rem;
   }
@@ -31,7 +36,7 @@
     margin-bottom: 2.4rem;
 
     @include desktop {
-      margin-bottom: 8.4rem;
+      margin-bottom: 8.2rem;
     }
   }
 
