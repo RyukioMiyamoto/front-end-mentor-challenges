@@ -76,7 +76,8 @@ body {
   @media screen and (min-width: 65.25em) {
     .cards-container {
       flex-direction: row;
-      max-width: 92rem; } }
+      max-width: 92rem;
+      margin: 17rem auto; } }
 
 .card {
   display: flex;
