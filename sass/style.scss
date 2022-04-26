@@ -158,8 +158,8 @@ body {
       }
 
       & ~ .challenge__title::after {
-        transform: scaleY(1);
-        transform-origin: top;
+        transform: scaleX(1);
+        transform-origin: left;
       }
 
       .challenge__preview-image {
@@ -206,13 +206,14 @@ body {
       background-color: $yukio-primary;
       position: absolute;
       left: -10%;
+      top: 0;
       z-index: -1;
 
       // MAKES TITLE-BG SHRINK ON DESKTOP
       @include desktop {
         transform: scaleX(0);
         transform-origin: right;
-        transition: transform 0.35s;
+        transition: transform 0.75s;
       }
     }
   }
