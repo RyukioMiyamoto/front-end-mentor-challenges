@@ -9,6 +9,13 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; }
 
+.sr-only {
+  opacity: 0;
+  position: absolute;
+  top: -500%;
+  left: -500%;
+  overflow: hidden; }
+
 /* vietnamese */
 @font-face {
   font-family: "Big Shoulders Display";
@@ -102,17 +109,17 @@ body {
     @media screen and (min-width: 65.25em) {
       .card__paragraph {
         margin-bottom: 8.2rem; } }
-  .card:nth-child(2) {
+  .card:nth-of-type(1) {
     background-color: #e38826; }
-    .card:nth-child(2) > .btn {
+    .card:nth-of-type(1) > .btn {
       color: #e38826; }
-  .card:nth-child(3) {
+  .card:nth-of-type(2) {
     background-color: #006970; }
-    .card:nth-child(3) > .btn {
+    .card:nth-of-type(2) > .btn {
       color: #006970; }
-  .card:nth-child(4) {
+  .card:nth-of-type(3) {
     background-color: #004241; }
-    .card:nth-child(4) > .btn {
+    .card:nth-of-type(3) > .btn {
       color: #004241; }
 
 .btn {
@@ -188,10 +195,3 @@ main {
         .social-media__icon:hover {
           fill: #ff8989;
           transform: scale(1.25); } }
-
-.sr-only {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  top: -500%;
-  left: -500%; }
