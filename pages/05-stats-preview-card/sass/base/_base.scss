@@ -1,0 +1,21 @@
+//// STYLE RESET
+*::before,
+*,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  // SETS STANDART FONT-SIZE TO 10PX
+  font-size: 62.5%;
+}
+.sr-only {
+  opacity: 0;
+  position: absolute;
+  top: -500%;
+  left: -500%;
+  overflow: hidden;
+}
