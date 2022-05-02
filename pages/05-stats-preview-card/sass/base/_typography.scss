@@ -193,9 +193,11 @@ body {
 
   &__heading {
     max-width: 15ch;
+    line-height: 114.5%;
     font-size: 2.8rem;
     font-weight: 700;
     color: $main-heading;
+    margin: 0 auto; 
 
     & em {
       font-style: normal;
@@ -204,7 +206,9 @@ body {
   }
 
   &__paragraph {
-    padding: 1rem 5.5rem;
+    padding: 1.6rem 3.5rem 0 3.5rem;
+    line-height: 165%;
+    margin-bottom: 4rem;
   }
 }
 

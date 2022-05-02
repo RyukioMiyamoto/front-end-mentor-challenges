@@ -1,0 +1,49 @@
+.preview-card {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 32.7rem;
+  background-color: $card-bg;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  margin: 8.8rem auto;
+
+  &__hero {
+    max-width: 100%;
+    margin-bottom: 3.7rem;
+    position: relative;
+
+    & img {
+      max-width: 100%;
+      object-fit: contain;
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 24rem;
+      background-color: $accent;
+      position: absolute;
+      top: 0;
+      left: 0;
+      mix-blend-mode: multiply;
+    }
+  }
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-bottom: 3.7rem;
+
+  &__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    & span {
+      letter-spacing: 0.015rem;
+    }
+  }
+}
