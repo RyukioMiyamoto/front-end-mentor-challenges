@@ -11,12 +11,30 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Frontend Mentor | Stats preview card component</title>
+    <title>Stats Preview Card component</title>
   </head>
   <body>
-    Get insights that help your business grow. Discover the benefits of data
-    analytics and make better decisions regarding revenue, customer experience,
-    and overall efficiency. 10k+ companies 314 templates 12m+ queries
+    <main>
+      <article class="preview-card">
+        <picture class="preview-card__hero">
+          <source srcset="./img/image-header-desktop.jpg" media="(min-width: 48rem)"/>
+          <img src="./img/image-header-mobile.jpg" alt="Three women sharing the same workspace, one is focused on some task, one is smiling at someone and one is typing something" />
+        </picture>
+        <section class="preview-card__summary">
+          <h1 class="preview-card__heading">Get insights that help your business grow.</h1>
+          </section>
+          <p class="preview-card__paragraph">
+            Discover the benefits of data analytics and make better decisions
+            regarding revenue, customer experience, and overall efficiency.
+          </p>
+        </article>
+        <div class="stats">
+          <div class="stats__stat">10k+ companies</div>
+          <div class="stats__stat">314 templates</div>
+          <div class="stats__stat">12m+ queries</div>
+        </div>
+      </div>
+    </main>
     <footer class="footer">
       <div class="logo">
         <img
