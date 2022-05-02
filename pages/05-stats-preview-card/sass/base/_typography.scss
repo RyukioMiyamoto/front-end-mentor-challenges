@@ -189,7 +189,13 @@ body {
 }
 
 .preview-card {
-  text-align: center;
+  &__summary {
+    text-align: center;
+
+    @include desktop {
+      text-align: start;
+    }
+  }
 
   &__heading {
     max-width: 15ch;
@@ -197,7 +203,12 @@ body {
     font-size: 2.8rem;
     font-weight: 700;
     color: $main-heading;
-    margin: 0 auto; 
+    margin: 0 auto;
+
+    @include desktop {
+      max-width: 18ch;
+      font-size: 3.6rem;
+    }
 
     & em {
       font-style: normal;
@@ -209,19 +220,24 @@ body {
     padding: 1.6rem 3.5rem 0 3.5rem;
     line-height: 165%;
     margin-bottom: 4rem;
+
+    @include desktop {
+      padding: 3rem 3rem 3rem 0;
+    }
   }
-}
 
-.stats {
-  &__stat {
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: $main-heading;
+  .stats {
+    &__stat {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: $main-heading;
 
-    & span {
-      font: 400 1.3rem "Lexend Deca", sans-serif;
-      text-transform: uppercase;
-      color: $stats-heading;
+      & span {
+        font: 400 1.3rem "Lexend Deca", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.015rem;
+        color: $stats-heading;
+      }
     }
   }
 }
