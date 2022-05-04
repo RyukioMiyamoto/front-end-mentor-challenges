@@ -112,3 +112,24 @@
 body {
   font: 400 1.5rem "Overpass", sans-serif;
 }
+
+.rating {
+  color: $neutral-light;
+
+  &__heading {
+    letter-spacing: -0.005rem;
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: $heading-main;
+  }
+
+  &__paragraph {
+    line-height: 2.2rem;
+    letter-spacing: -0.03rem;
+
+    &--submitted {
+      padding: 0rem;
+      text-align: center;
+    }
+  }
+}

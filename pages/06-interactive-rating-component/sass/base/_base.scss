@@ -12,6 +12,14 @@ html {
   // SETS STANDART FONT-SIZE TO 10PX
   font-size: 62.5%;
 }
+
+button,
+input[type="radio"] {
+  appearance: none;
+  border: none;
+  background-color: transparent;
+}
+
 .sr-only {
   opacity: 0;
   position: absolute;

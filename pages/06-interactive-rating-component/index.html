@@ -14,65 +14,75 @@
   </head>
   <body>
     <main>
-      <article class="rating-container">
+      <article class="rating">
         <form class="rating__form">
-          <h1 class="rating__heading">How did we do?</h1>
-          <p class="rating__paragraph">
+          <div class="ratings__circle mb-small">
+            <img src="./img/icon-star.svg" alt="" aria-hidden="true" />
+          </div>
+          <h1 class="rating__heading mb-smallest">How did we do?</h1>
+          <p class="rating__paragraph mb-large">
             Please let us know how we did with your support request. All
             feedback is appreciated to help us improve our offering!
           </p>
-          <div class="ratings">
+          <div class="ratings mb-medium">
             <input
               type="radio"
               name="rating"
               id="rating1"
-              class="ratings__value"
               data-rating="1"
+              class="rating__radio"
             />
-            <label for="rating1">1</label>
+            <label for="rating1" class="ratings__circle"><span>1</span></label>
             <input
               type="radio"
               name="rating"
               id="rating2"
-              class="ratings__value"
               data-rating="2"
+              class="rating__radio"
             />
-            <label for="rating2">2</label>
+            <label for="rating2" class="ratings__circle"><span>2</span></label>
             <input
               type="radio"
               name="rating"
               id="rating3"
-              class="ratings__value"
               data-rating="3"
+              class="rating__radio"
             />
-            <label for="rating3">3</label>
+            <label for="rating3" class="ratings__circle"><span>3</span></label>
             <input
               type="radio"
               name="rating"
               id="rating4"
-              class="ratings__value"
               data-rating="4"
+              class="rating__radio"
             />
-            <label for="rating4">4</label>
+            <label for="rating4" class="ratings__circle"><span>4</span></label>
             <input
               type="radio"
               name="rating"
               id="rating5"
-              class="ratings__value"
               data-rating="5"
+              class="rating__radio"
             />
-            <label for="rating5">5</label>
+            <label for="rating5" class="ratings__circle"><span>5</span></label>
           </div>
-          <button type="submit">Submit</button>
+          <button type="submit" class="btn btn--submit">Submit</button>
         </form>
 
         <section class="rating__form rating__form--submitted">
-          <h1 class="rating__final-rating">
-            You selected <span id="rating-value"></span> out of 5
+          <div class="rating__picture mb-small">
+            <img
+              src="./img/illustration-thank-you.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </div>
+          <h1 class="rating__final-rating mb-medium">
+            You selected 1 out of 5
           </h1>
-          <h2 class="rating__heading">Thank you!</h2>
-          <p class="rating__paragraph">
-            We appreciate you taking the time to give a rating. If you ever need
+          <h2 class="rating__heading mb-small-2">Thank you!</h2>
+          <p class="rating__paragraph--submitted">
+            We appreciate you taking the time to give a rating.If you ever need
             more support, don’t hesitate to get in touch!
           </p>
         </section>

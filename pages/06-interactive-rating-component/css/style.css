@@ -9,6 +9,12 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; }
 
+button,
+input[type="radio"] {
+  appearance: none;
+  border: none;
+  background-color: transparent; }
+
 .sr-only {
   opacity: 0;
   position: absolute;
@@ -109,6 +115,44 @@ html {
 body {
   font: 400 1.5rem "Overpass", sans-serif; }
 
+.rating {
+  color: #959eac; }
+  .rating__heading {
+    letter-spacing: -0.005rem;
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: #fff; }
+  .rating__paragraph {
+    line-height: 2.2rem;
+    letter-spacing: -0.03rem; }
+    .rating__paragraph--submitted {
+      padding: 0rem;
+      text-align: center; }
+
+.mb-smallest {
+  margin-bottom: 1rem; }
+
+.mb-small-2 {
+  margin-bottom: 1.5rem; }
+
+.mb-small {
+  margin-bottom: 1.8rem; }
+
+.mb-medium {
+  margin-bottom: 2.3rem; }
+
+.mb-large {
+  margin-bottom: 2.8rem; }
+
+.mb-larger {
+  margin-bottom: 3rem; }
+
+body {
+  background-color: #121417; }
+
+main {
+  min-height: 100vh; }
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -155,3 +199,72 @@ body {
         .social-media__icon:hover {
           fill: #ff8989;
           transform: scale(1.25); } }
+
+.rating {
+  max-width: 32.7rem;
+  min-height: 36rem;
+  padding: 2.3rem 1.8rem 3.2rem 2rem;
+  border-radius: 1.5rem;
+  background-color: #252d37;
+  margin: 15rem auto; }
+  .rating__form {
+    flex-direction: column;
+    align-items: center;
+    position: relative; }
+    .rating__form--submitted {
+      display: none;
+      opacity: 0; }
+  .rating__picture {
+    padding-top: 1rem; }
+    .rating__picture img {
+      width: 15rem;
+      height: 10rem; }
+  .rating__final-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16.8rem;
+    height: 3.2rem;
+    background-color: rgba(124, 135, 152, 0.1);
+    border-radius: 2.5rem;
+    letter-spacing: -0.025rem;
+    font-size: 1.5rem;
+    color: #fb7413; }
+
+.ratings {
+  display: flex; }
+
+.rating__radio:checked + .ratings__circle {
+  color: #fff;
+  background-color: #fb7413; }
+
+.ratings__circle,
+.ratings__rating {
+  width: 4.2rem;
+  height: 4.2rem;
+  background-color: rgba(124, 135, 152, 0.1);
+  border-radius: 50%;
+  transition: 0.25s;
+  position: relative; }
+  .ratings__circle:not(:last-of-type),
+  .ratings__rating:not(:last-of-type) {
+    margin-right: 1.7rem; }
+  .ratings__circle > *,
+  .ratings__rating > * {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.btn {
+  width: 28rem;
+  height: 4.6rem;
+  border-radius: 2.5rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 0.06rem; }
+  .btn--submit {
+    background-color: #fb7413;
+    font-weight: 700;
+    color: #fff; }
