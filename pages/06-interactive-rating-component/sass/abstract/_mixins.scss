@@ -11,6 +11,12 @@
   }
 }
 
+@mixin smallDevice {
+  @media screen and (max-width: 17.5em) {
+    @content;
+  }
+}
+
 //// REDUCED MOTION QUERY
 @mixin reducedMotion {
   @media screen and (prefers-reduced-motion) {
