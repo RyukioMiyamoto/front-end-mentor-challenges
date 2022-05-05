@@ -1,5 +1,5 @@
 .rating {
-  max-width: 32.7rem;
+  width: 32.7rem;
   min-height: 36rem;
   border-radius: 1.5rem;
   background: radial-gradient(
@@ -9,8 +9,8 @@
   );
   margin: 15rem auto;
 
-  @include desktop {
-    max-width: 41.2rem;
+  @include tablet {
+    width: 41.2rem;
     min-height: 41.6rem;
     border-radius: 2.5rem;
     margin: 19.5rem auto;
@@ -22,7 +22,7 @@
     padding: 2.3rem 1.8rem 3.2rem 2rem;
     position: relative;
 
-    @include desktop {
+    @include tablet {
       padding: 3rem 1.8rem 3.2rem 3.2rem;
     }
 
@@ -42,7 +42,7 @@
       transform: translateX(-10%);
       opacity: 0;
 
-      @include desktop {
+      @include tablet {
         padding: 1.6rem 1rem;
       }
 
@@ -63,7 +63,7 @@
   &__picture {
     padding-top: 1rem;
 
-    @include desktop {
+    @include tablet {
       padding-top: 3rem;
     }
 
@@ -71,7 +71,7 @@
       width: 15rem;
       height: 10rem;
 
-      @include desktop {
+      @include tablet {
         width: 16rem;
         height: auto;
       }
@@ -106,12 +106,10 @@
       }
     }
 
-    @include desktop {
-      &:focus + .ratings__circle {
-        color: #fff;
-        background-color: $primary;
-        @include focusShadow;
-      }
+    &:focus + .ratings__circle {
+      color: #fff;
+      background-color: $primary;
+      @include focusShadow;
     }
   }
 }
@@ -131,8 +129,17 @@
   &:not(:last-of-type) {
     margin-right: 1.7rem;
 
-    @include desktop {
+    @include tablet {
       margin-right: 2rem;
+    }
+  }
+
+  &--hover {
+    cursor: pointer;
+
+    &:hover {
+      background-color: $primary;
+      color: $btn-submit;
     }
   }
 
@@ -144,17 +151,8 @@
     transform: translate(-50%, -50%);
   }
 
-  @include desktop {
+  @include tablet {
     width: 5rem;
     height: 5rem;
-
-    &--hover {
-      cursor: pointer;
-
-      &:hover {
-        background-color: $primary;
-        color: $btn-submit;
-      }
-    }
   }
 }

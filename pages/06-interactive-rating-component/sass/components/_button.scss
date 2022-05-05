@@ -6,26 +6,28 @@
   font-size: 1.5rem;
   letter-spacing: 0.06rem;
   position: relative;
+  cursor: pointer;
   transition: 0.125s;
 
   &--submit {
     background-color: $primary;
-    font-weight: 700;
+    font-weight: 400;
     color: $btn-submit;
   }
 
-  @include desktop {
+  &:hover {
+    background-color: $btn-submit;
+    color: $primary;
+    letter-spacing: 0.25rem;
+  }
+
+  &:focus {
+    @include focusShadow;
+  }
+
+  @include tablet {
     width: 33.9rem;
     height: 4.5rem;
     cursor: pointer;
-
-    &:hover {
-      background-color: $btn-submit;
-      color: $primary;
-    }
-    
-    &:focus {
-      @include focusShadow;
-    }
   }
 }
