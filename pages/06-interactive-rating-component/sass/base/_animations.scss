@@ -1,0 +1,13 @@
+@keyframes disappearRight {
+  to {
+    transform: translateX(10%);
+    opacity: 0;
+  }
+}
+
+@keyframes appearRight {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

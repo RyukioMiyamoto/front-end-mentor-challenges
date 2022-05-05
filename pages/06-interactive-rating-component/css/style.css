@@ -129,6 +129,16 @@ body {
       padding: 0rem;
       text-align: center; }
 
+@keyframes disappearRight {
+  to {
+    transform: translateX(10%);
+    opacity: 0; } }
+
+@keyframes appearRight {
+  to {
+    transform: translateX(0);
+    opacity: 1; } }
+
 .mb-smallest {
   margin-bottom: 1rem; }
 
@@ -211,9 +221,15 @@ main {
     flex-direction: column;
     align-items: center;
     position: relative; }
+    .rating__form.invisible {
+      animation: disappearRight 0.5s ease forwards; }
     .rating__form--submitted {
       display: none;
+      transform: translateX(-10%);
       opacity: 0; }
+      .rating__form--submitted.visible {
+        display: flex;
+        animation: appearRight 0.5s ease forwards; }
   .rating__picture {
     padding-top: 1rem; }
     .rating__picture img {
@@ -230,6 +246,19 @@ main {
     letter-spacing: -0.025rem;
     font-size: 1.5rem;
     color: #fb7413; }
+  .rating__message {
+    padding: 0.5rem 1rem;
+    border-radius: 2.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: #f31010;
+    transform: scaleY(0);
+    position: absolute;
+    bottom: -1.5rem;
+    right: -2.5rem;
+    transition: 0.25s ease; }
+    .rating__message.show {
+      transform: scaleY(1); }
 
 .ratings {
   display: flex; }
@@ -263,7 +292,8 @@ main {
   border-radius: 2.5rem;
   text-transform: uppercase;
   font-size: 1.5rem;
-  letter-spacing: 0.06rem; }
+  letter-spacing: 0.06rem;
+  position: relative; }
   .btn--submit {
     background-color: #fb7413;
     font-weight: 700;

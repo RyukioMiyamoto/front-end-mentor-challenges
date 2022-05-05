@@ -11,9 +11,19 @@
     align-items: center;
     position: relative;
 
+    &.invisible {
+      animation: disappearRight 0.5s ease forwards;
+    }
+
     &--submitted {
       display: none;
+      transform: translateX(-10%);
       opacity: 0;
+
+      &.visible {
+        display: flex;
+        animation: appearRight 0.5s ease forwards;
+      }
     }
   }
 
@@ -37,6 +47,23 @@
     letter-spacing: -0.025rem;
     font-size: 1.5rem;
     color: $primary;
+  }
+
+  &__message {
+    padding: 0.5rem 1rem;
+    border-radius: 2.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: #f31010;
+    transform: scaleY(0);
+    position: absolute;
+    bottom: -1.5rem;
+    right: -2.5rem;
+    transition: 0.25s ease;
+
+    &.show {
+      transform: scaleY(1);
+    }
   }
 }
 

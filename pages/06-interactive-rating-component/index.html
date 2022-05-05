@@ -9,6 +9,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="./css/style.css" />
     <title>Interactive rating component</title>
   </head>
@@ -66,7 +67,9 @@
             />
             <label for="rating5" class="ratings__circle"><span>5</span></label>
           </div>
-          <button type="submit" class="btn btn--submit">Submit</button>
+          <button type="submit" class="btn btn--submit">
+            Submit <span class="rating__message">Please give us a rating!</span>
+          </button>
         </form>
 
         <section class="rating__form rating__form--submitted">

@@ -25,6 +25,13 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; }
 
+.sr-only {
+  opacity: 0;
+  position: absolute;
+  top: -500%;
+  left: -500%;
+  overflow: hidden; }
+
 @font-face {
   font-family: "Outfit";
   font-style: normal;
@@ -268,10 +275,3 @@ main {
         .social-media__icon:hover {
           fill: #ff8989;
           transform: scale(1.25); } }
-
-.sr-only {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  top: -500%;
-  left: -500%; }
