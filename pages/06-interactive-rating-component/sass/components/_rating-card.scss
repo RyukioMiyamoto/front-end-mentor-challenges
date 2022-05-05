@@ -2,7 +2,11 @@
   max-width: 32.7rem;
   min-height: 36rem;
   border-radius: 1.5rem;
-  background-color: $card-bg;
+  background: radial-gradient(
+    circle at 50% -25%,
+    rgba($neutral-light, 0.25) 5%,
+    $card-bg 30%
+  );
   margin: 15rem auto;
 
   @include desktop {
