@@ -65,19 +65,32 @@
       transform: scaleY(1);
     }
   }
+
+  &__radio {
+    &:checked + .ratings__circle {
+      color: #fff;
+      background-color: $primary;
+
+      @include desktop {
+        background-color: $neutral-medium;
+      }
+    }
+
+    @include desktop {
+      &:focus + .ratings__circle {
+        color: #fff;
+        background-color: $primary;
+        @include focusShadow;
+      }
+    }
+  }
 }
 
 .ratings {
   display: flex;
 }
 
-.rating__radio:checked + .ratings__circle {
-  color: #fff;
-  background-color: $primary;
-}
-
-.ratings__circle,
-.ratings__rating {
+.ratings__circle {
   width: 4.2rem;
   height: 4.2rem;
   background-color: $neutral-dark;
@@ -95,5 +108,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  @include desktop {
+    &--hover {
+      cursor: pointer;
+
+      &:hover {
+        background-color: $primary;
+      }
+    }
   }
 }

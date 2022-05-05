@@ -259,32 +259,43 @@ main {
     transition: 0.25s ease; }
     .rating__message.show {
       transform: scaleY(1); }
+  .rating__radio:checked + .ratings__circle {
+    color: #fff;
+    background-color: #fb7413; }
+    @media screen and (min-width: 65.25em) {
+      .rating__radio:checked + .ratings__circle {
+        background-color: #7c8798; } }
+  @media screen and (min-width: 65.25em) {
+    .rating__radio:focus + .ratings__circle {
+      color: #fff;
+      background-color: #fb7413;
+      outline: none;
+      transform: translateY(-0.3rem);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.365); } }
 
 .ratings {
   display: flex; }
 
-.rating__radio:checked + .ratings__circle {
-  color: #fff;
-  background-color: #fb7413; }
-
-.ratings__circle,
-.ratings__rating {
+.ratings__circle {
   width: 4.2rem;
   height: 4.2rem;
   background-color: rgba(124, 135, 152, 0.1);
   border-radius: 50%;
   transition: 0.25s;
   position: relative; }
-  .ratings__circle:not(:last-of-type),
-  .ratings__rating:not(:last-of-type) {
+  .ratings__circle:not(:last-of-type) {
     margin-right: 1.7rem; }
-  .ratings__circle > *,
-  .ratings__rating > * {
+  .ratings__circle > * {
     display: block;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+  @media screen and (min-width: 65.25em) {
+    .ratings__circle--hover {
+      cursor: pointer; }
+      .ratings__circle--hover:hover {
+        background-color: #fb7413; } }
 
 .btn {
   width: 28rem;
@@ -293,8 +304,16 @@ main {
   text-transform: uppercase;
   font-size: 1.5rem;
   letter-spacing: 0.06rem;
-  position: relative; }
+  position: relative;
+  transition: 0.125s; }
   .btn--submit {
     background-color: #fb7413;
     font-weight: 700;
     color: #fff; }
+  @media screen and (min-width: 65.25em) {
+    .btn {
+      cursor: pointer; }
+      .btn:focus {
+        outline: none;
+        transform: translateY(-0.3rem);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.365); } }

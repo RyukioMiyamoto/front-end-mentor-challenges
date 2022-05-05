@@ -6,10 +6,19 @@
   font-size: 1.5rem;
   letter-spacing: 0.06rem;
   position: relative;
+  transition: 0.125s;
 
   &--submit {
     background-color: $primary;
     font-weight: 700;
     color: $btn-submit;
+  }
+
+  @include desktop {
+    cursor: pointer;
+    
+    &:focus {
+      @include focusShadow;
+    }
   }
 }
