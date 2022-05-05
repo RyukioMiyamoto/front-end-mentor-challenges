@@ -122,12 +122,35 @@ body {
     font-weight: 700;
     font-size: 2.4rem;
     color: #fff; }
+    @media screen and (min-width: 65.25em) {
+      .rating__heading {
+        font-size: 2.8rem; } }
   .rating__paragraph {
     line-height: 2.2rem;
     letter-spacing: -0.03rem; }
+    @media screen and (min-width: 65.25em) {
+      .rating__paragraph {
+        max-width: 35ch; } }
     .rating__paragraph--submitted {
       padding: 0rem;
       text-align: center; }
+      @media screen and (min-width: 65.25em) {
+        .rating__paragraph--submitted {
+          max-width: 35ch; } }
+  .rating__final-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16.8rem;
+    height: 3.2rem;
+    background-color: rgba(124, 135, 152, 0.1);
+    border-radius: 2.5rem;
+    letter-spacing: -0.025rem;
+    font-size: 1.5rem;
+    color: #fb7413; }
+    @media screen and (min-width: 65.25em) {
+      .rating__final-rating {
+        width: 19.2rem; } }
 
 @keyframes disappearRight {
   to {
@@ -147,9 +170,15 @@ body {
 
 .mb-small {
   margin-bottom: 1.8rem; }
+  @media screen and (min-width: 65.25em) {
+    .mb-small {
+      margin-bottom: 3.2rem; } }
 
 .mb-medium {
   margin-bottom: 2.3rem; }
+  @media screen and (min-width: 65.25em) {
+    .mb-medium {
+      margin-bottom: 3.7rem; } }
 
 .mb-large {
   margin-bottom: 2.8rem; }
@@ -213,39 +242,59 @@ main {
 .rating {
   max-width: 32.7rem;
   min-height: 36rem;
-  padding: 2.3rem 1.8rem 3.2rem 2rem;
   border-radius: 1.5rem;
   background-color: #252d37;
   margin: 15rem auto; }
+  @media screen and (min-width: 65.25em) {
+    .rating {
+      max-width: 41.2rem;
+      min-height: 41.6rem;
+      border-radius: 2.5rem;
+      margin: 19.5rem auto; } }
   .rating__form {
     flex-direction: column;
     align-items: center;
+    padding: 2.3rem 1.8rem 3.2rem 2rem;
     position: relative; }
+    @media screen and (min-width: 65.25em) {
+      .rating__form {
+        padding: 3rem 1.8rem 3.2rem 3.2rem; } }
     .rating__form.invisible {
       animation: disappearRight 0.5s ease forwards; }
+      @media screen and (prefers-reduced-motion) {
+        .rating__form.invisible {
+          display: none;
+          opacity: 0;
+          animation: none; } }
     .rating__form--submitted {
       display: none;
+      padding: 2.4rem 1rem;
       transform: translateX(-10%);
       opacity: 0; }
+      @media screen and (min-width: 65.25em) {
+        .rating__form--submitted {
+          padding: 1.6rem 1rem; } }
       .rating__form--submitted.visible {
         display: flex;
         animation: appearRight 0.5s ease forwards; }
+        @media screen and (prefers-reduced-motion) {
+          .rating__form--submitted.visible {
+            display: flex;
+            transform: initial;
+            opacity: 1;
+            animation: none; } }
   .rating__picture {
     padding-top: 1rem; }
+    @media screen and (min-width: 65.25em) {
+      .rating__picture {
+        padding-top: 3rem; } }
     .rating__picture img {
       width: 15rem;
       height: 10rem; }
-  .rating__final-rating {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 16.8rem;
-    height: 3.2rem;
-    background-color: rgba(124, 135, 152, 0.1);
-    border-radius: 2.5rem;
-    letter-spacing: -0.025rem;
-    font-size: 1.5rem;
-    color: #fb7413; }
+      @media screen and (min-width: 65.25em) {
+        .rating__picture img {
+          width: 16rem;
+          height: auto; } }
   .rating__message {
     padding: 0.5rem 1rem;
     border-radius: 2.5rem;
@@ -285,6 +334,9 @@ main {
   position: relative; }
   .ratings__circle:not(:last-of-type) {
     margin-right: 1.7rem; }
+    @media screen and (min-width: 65.25em) {
+      .ratings__circle:not(:last-of-type) {
+        margin-right: 2rem; } }
   .ratings__circle > * {
     display: block;
     position: absolute;
@@ -292,10 +344,14 @@ main {
     left: 50%;
     transform: translate(-50%, -50%); }
   @media screen and (min-width: 65.25em) {
-    .ratings__circle--hover {
-      cursor: pointer; }
-      .ratings__circle--hover:hover {
-        background-color: #fb7413; } }
+    .ratings__circle {
+      width: 5rem;
+      height: 5rem; }
+      .ratings__circle--hover {
+        cursor: pointer; }
+        .ratings__circle--hover:hover {
+          background-color: #fb7413;
+          color: #fff; } }
 
 .btn {
   width: 28rem;
@@ -312,7 +368,12 @@ main {
     color: #fff; }
   @media screen and (min-width: 65.25em) {
     .btn {
+      width: 33.9rem;
+      height: 4.5rem;
       cursor: pointer; }
+      .btn:hover {
+        background-color: #fff;
+        color: #fb7413; }
       .btn:focus {
         outline: none;
         transform: translateY(-0.3rem);

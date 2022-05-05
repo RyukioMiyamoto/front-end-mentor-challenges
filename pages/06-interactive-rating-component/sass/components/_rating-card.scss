@@ -1,28 +1,57 @@
 .rating {
   max-width: 32.7rem;
   min-height: 36rem;
-  padding: 2.3rem 1.8rem 3.2rem 2rem;
   border-radius: 1.5rem;
   background-color: $card-bg;
   margin: 15rem auto;
 
+  @include desktop {
+    max-width: 41.2rem;
+    min-height: 41.6rem;
+    border-radius: 2.5rem;
+    margin: 19.5rem auto;
+  }
+
   &__form {
     flex-direction: column;
     align-items: center;
+    padding: 2.3rem 1.8rem 3.2rem 2rem;
     position: relative;
+
+    @include desktop {
+      padding: 3rem 1.8rem 3.2rem 3.2rem;
+    }
 
     &.invisible {
       animation: disappearRight 0.5s ease forwards;
+
+      @include reducedMotion {
+        display: none;
+        opacity: 0;
+        animation: none;
+      }
     }
 
     &--submitted {
       display: none;
+      padding: 2.4rem 1rem;
       transform: translateX(-10%);
       opacity: 0;
+
+      @include desktop {
+        padding: 1.6rem 1rem;
+      }
 
       &.visible {
         display: flex;
         animation: appearRight 0.5s ease forwards;
+
+        @include reducedMotion {
+          display: flex;
+          transform: initial;
+          opacity: 1;
+          animation: none;
+        }
       }
     }
   }
@@ -30,23 +59,19 @@
   &__picture {
     padding-top: 1rem;
 
+    @include desktop {
+      padding-top: 3rem;
+    }
+
     & img {
       width: 15rem;
       height: 10rem;
-    }
-  }
 
-  &__final-rating {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 16.8rem;
-    height: 3.2rem;
-    background-color: $neutral-dark;
-    border-radius: 2.5rem;
-    letter-spacing: -0.025rem;
-    font-size: 1.5rem;
-    color: $primary;
+      @include desktop {
+        width: 16rem;
+        height: auto;
+      }
+    }
   }
 
   &__message {
@@ -100,6 +125,10 @@
 
   &:not(:last-of-type) {
     margin-right: 1.7rem;
+
+    @include desktop {
+      margin-right: 2rem;
+    }
   }
 
   & > * {
@@ -111,11 +140,15 @@
   }
 
   @include desktop {
+    width: 5rem;
+    height: 5rem;
+
     &--hover {
       cursor: pointer;
 
       &:hover {
         background-color: $primary;
+        color: $btn-submit;
       }
     }
   }

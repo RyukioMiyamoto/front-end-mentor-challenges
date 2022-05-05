@@ -15,7 +15,14 @@
   }
 
   @include desktop {
+    width: 33.9rem;
+    height: 4.5rem;
     cursor: pointer;
+
+    &:hover {
+      background-color: $btn-submit;
+      color: $primary;
+    }
     
     &:focus {
       @include focusShadow;
