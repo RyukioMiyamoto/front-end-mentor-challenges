@@ -31,12 +31,10 @@ const handleSubmit = function (e) {
     }, 1000);
     return null;
   }
-  ratingForm.classList.add("invisible");
+
   finalRating.innerText = `You selected ${ratingValue} out of 5`;
-  setTimeout(() => {
-    formSubmitted.classList.add("visible");
-    ratingForm.style.display = "none";
-  }, 500);
+  ratingForm.classList.add("invisible");
+  formSubmitted.classList.add("visible");
 };
 
 ratingForm.addEventListener("change", handleChange);

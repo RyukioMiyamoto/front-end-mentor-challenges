@@ -9,6 +9,7 @@
   );
   margin: 15rem auto;
   overflow: hidden;
+  position: relative;
 
   @include tablet {
     width: 41.2rem;
@@ -22,7 +23,6 @@
   }
 
   &__form {
-    flex-direction: column;
     align-items: center;
     padding: 2.3rem 1.8rem 3.2rem 2rem;
     position: relative;
@@ -32,8 +32,7 @@
     }
 
     &.invisible {
-      animation: disappearRight 0.5s ease forwards;
-      animation-delay: 0.395s;
+      animation: disappearRight 0.25s ease forwards 0.565s;
 
       & #star {
         animation: star 1.25s;
@@ -41,16 +40,20 @@
       }
 
       @include reducedMotion {
-        display: none;
+        visibility: none;
         opacity: 0;
         animation: none;
       }
     }
 
     &--submitted {
-      display: none;
+      display: flex;
+      flex-direction: column;
       padding: 2.4rem 1rem;
       transform: translateX(-10%);
+      position: absolute;
+      top: 0;
+      visibility: hidden;
       opacity: 0;
 
       @include tablet {
@@ -58,13 +61,11 @@
       }
 
       &.visible {
-        display: flex;
-        animation: appearRight 0.5s ease forwards;
-        animation-delay: 0.125s;
+        animation: appearRight 0.5s ease forwards 0.9s;
 
         @include reducedMotion {
-          display: flex;
           transform: initial;
+          visibility: visible;
           opacity: 1;
           animation: none;
         }

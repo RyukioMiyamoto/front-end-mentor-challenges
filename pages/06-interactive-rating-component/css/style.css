@@ -155,15 +155,19 @@ body {
 @keyframes disappearRight {
   to {
     transform: translateX(10%);
+    visibility: hidden;
     opacity: 0; } }
 
 @keyframes appearRight {
   to {
     transform: translateX(0);
+    visibility: visible;
     opacity: 1; } }
 
 @keyframes star {
-  to {
+  20% {
+    transform: scale(0.5) translate(-100%, -100%); }
+  100% {
     transform: rotate(-180deg) scale(100); } }
 
 .mb-smallest {
@@ -249,7 +253,8 @@ main {
   border-radius: 1.5rem;
   background: radial-gradient(circle at 50% -25%, rgba(149, 158, 172, 0.25) 5%, #171e28 30%);
   margin: 15rem auto;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
   @media screen and (min-width: 48em) {
     .rating {
       width: 41.2rem;
@@ -260,7 +265,6 @@ main {
     .rating {
       max-width: 90%; } }
   .rating__form {
-    flex-direction: column;
     align-items: center;
     padding: 2.3rem 1.8rem 3.2rem 2rem;
     position: relative; }
@@ -268,32 +272,33 @@ main {
       .rating__form {
         padding: 3rem 1.8rem 3.2rem 3.2rem; } }
     .rating__form.invisible {
-      animation: disappearRight 0.5s ease forwards;
-      animation-delay: 0.35s; }
+      animation: disappearRight 0.25s ease forwards 0.565s; }
       .rating__form.invisible #star {
         animation: star 1.25s;
         z-index: 50; }
       @media screen and (prefers-reduced-motion) {
         .rating__form.invisible {
-          display: none;
+          visibility: none;
           opacity: 0;
           animation: none; } }
     .rating__form--submitted {
-      display: none;
+      display: flex;
+      flex-direction: column;
       padding: 2.4rem 1rem;
       transform: translateX(-10%);
+      position: absolute;
+      top: 0;
+      visibility: hidden;
       opacity: 0; }
       @media screen and (min-width: 48em) {
         .rating__form--submitted {
           padding: 1.6rem 1rem; } }
       .rating__form--submitted.visible {
-        display: flex;
-        animation: appearRight 0.5s ease forwards;
-        animation-delay: 0.125s; }
+        animation: appearRight 0.5s ease forwards 0.9s; }
         @media screen and (prefers-reduced-motion) {
           .rating__form--submitted.visible {
-            display: flex;
             transform: initial;
+            visibility: visible;
             opacity: 1;
             animation: none; } }
   .rating__picture {
