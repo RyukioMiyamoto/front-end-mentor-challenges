@@ -284,11 +284,12 @@ main {
     .rating__form--submitted {
       display: flex;
       flex-direction: column;
+      width: 100%;
       padding: 2.4rem 1rem;
-      transform: translateX(-10%);
       position: absolute;
-      top: 0;
       visibility: hidden;
+      transform: translateX(-10%);
+      top: 0;
       opacity: 0; }
       @media screen and (min-width: 48em) {
         .rating__form--submitted {
@@ -297,7 +298,7 @@ main {
         animation: appearRight 0.5s ease forwards 0.9s; }
         @media screen and (prefers-reduced-motion) {
           .rating__form--submitted.visible {
-            transform: initial;
+            transform: translateX(0);
             visibility: visible;
             opacity: 1;
             animation: none; } }
