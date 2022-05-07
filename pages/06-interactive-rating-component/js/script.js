@@ -34,9 +34,9 @@ const handleSubmit = function (e) {
   ratingForm.classList.add("invisible");
   finalRating.innerText = `You selected ${ratingValue} out of 5`;
   setTimeout(() => {
-    ratingForm.style.display = "none";
     formSubmitted.classList.add("visible");
-  }, 250);
+    ratingForm.style.display = "none";
+  }, 500);
 };
 
 ratingForm.addEventListener("change", handleChange);

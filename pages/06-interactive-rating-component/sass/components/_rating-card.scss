@@ -8,6 +8,7 @@
     $card-bg 30%
   );
   margin: 15rem auto;
+  overflow: hidden;
 
   @include tablet {
     width: 41.2rem;
@@ -32,6 +33,12 @@
 
     &.invisible {
       animation: disappearRight 0.5s ease forwards;
+      animation-delay: 0.395s;
+
+      & #star {
+        animation: star 1.25s;
+        z-index: 50;
+      }
 
       @include reducedMotion {
         display: none;
@@ -53,6 +60,7 @@
       &.visible {
         display: flex;
         animation: appearRight 0.5s ease forwards;
+        animation-delay: 0.125s;
 
         @include reducedMotion {
           display: flex;

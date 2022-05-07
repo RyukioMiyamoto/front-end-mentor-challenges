@@ -162,6 +162,10 @@ body {
     transform: translateX(0);
     opacity: 1; } }
 
+@keyframes star {
+  to {
+    transform: rotate(-180deg) scale(100); } }
+
 .mb-smallest {
   margin-bottom: 1rem; }
 
@@ -244,7 +248,8 @@ main {
   min-height: 36rem;
   border-radius: 1.5rem;
   background: radial-gradient(circle at 50% -25%, rgba(149, 158, 172, 0.25) 5%, #171e28 30%);
-  margin: 15rem auto; }
+  margin: 15rem auto;
+  overflow: hidden; }
   @media screen and (min-width: 48em) {
     .rating {
       width: 41.2rem;
@@ -263,7 +268,11 @@ main {
       .rating__form {
         padding: 3rem 1.8rem 3.2rem 3.2rem; } }
     .rating__form.invisible {
-      animation: disappearRight 0.5s ease forwards; }
+      animation: disappearRight 0.5s ease forwards;
+      animation-delay: 0.35s; }
+      .rating__form.invisible #star {
+        animation: star 1.25s;
+        z-index: 50; }
       @media screen and (prefers-reduced-motion) {
         .rating__form.invisible {
           display: none;
@@ -279,7 +288,8 @@ main {
           padding: 1.6rem 1rem; } }
       .rating__form--submitted.visible {
         display: flex;
-        animation: appearRight 0.5s ease forwards; }
+        animation: appearRight 0.5s ease forwards;
+        animation-delay: 0.125s; }
         @media screen and (prefers-reduced-motion) {
           .rating__form--submitted.visible {
             display: flex;

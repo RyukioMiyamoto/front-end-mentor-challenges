@@ -11,3 +11,9 @@
     opacity: 1;
   }
 }
+
+@keyframes star {
+  to {
+    transform: rotate(-180deg) scale(100);
+  }
+}
