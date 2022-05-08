@@ -1,3 +1,4 @@
+const allRatings = document.querySelectorAll(".rating__radio");
 const ratingForm = document.querySelector(".rating__form");
 const formSubmitted = document.querySelector(".rating__form--submitted");
 const submitBtn = document.querySelector(".btn--submit");
@@ -56,6 +57,8 @@ const handleSubmit = function (e) {
   formSubmitted.classList.add("visible");
 };
 
+// Resets selected rating on Firefox
+allRatings.forEach((rating) => (rating.checked = false));
 ratingForm.addEventListener("change", handleChange);
 ratingForm.addEventListener("focusin", handleFocus);
 document.addEventListener("keydown", handleKeydown);
